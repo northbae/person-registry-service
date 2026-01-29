@@ -36,7 +36,7 @@ jobs:
         run: docker build -t my-spring-app .
 
       - name: Deploy to Render
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
           service-id: ${{ secrets.RENDER_SERVICE_ID }}
